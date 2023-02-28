@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::get('/frutta', function () {
+    $fruttas = ['Arancia', 'Melone', 'Mandarino'];
+
+    return view('frutta', compact('fruttas'));
+})->name('frutta');
